@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Set ECMAScript target version
+    "module": "commonjs", // Use CommonJS modules (suitable for Node.js)
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Allow default imports from non-ES modules (like 'pg')
+    "emitDecoratorMetadata": true, // Enables emitting decorator metadata required by TypeORM
+    "experimentalDecorators": true, // Enables the use of decorators in TypeScript
+    "sourceMap": true, // Generate source maps
+    "outDir": "./dist", // Output directory for the compiled code
+    "moduleResolution": "node", // Resolve modules in Node.js fashion
+    "skipLibCheck": true, // Skip type checking for all declaration files (improves compilation speed)
+    "strictPropertyInitialization": false, // Avoid requiring property initialization in the constructor
+    "baseUrl": "./src", // Base directory to resolve non-relative module names
+    "paths": {
+      "*": ["node_modules/*"] // Resolving modules from node_modules
+    }
+  },
+  "include": [
+    "src/**/*.ts" // Include all TypeScript files from the src directory
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules folder from compilation
+    "dist" // Exclude the output directory
+  ]
+}
